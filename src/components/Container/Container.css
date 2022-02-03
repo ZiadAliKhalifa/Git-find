@@ -1,0 +1,13 @@
+.header {
+    object-fit: cover;
+    max-height: 50vh;
+    width: 70vw;
+}
+
+.search-box-container {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-primary-color);
+}

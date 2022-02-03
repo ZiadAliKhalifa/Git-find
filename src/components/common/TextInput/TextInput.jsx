@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./TextInput.css";
 
-const TextInput = ({ timeoutFunction }) => {
+const TextInput = ({ timeoutFunction, label }) => {
     const [inputValue, setInputValue] = useState("");
 
     // Trigger a passed function when user stops typing
@@ -22,8 +22,10 @@ const TextInput = ({ timeoutFunction }) => {
                 onChange={(e) => {
                     setInputValue(e.target.value);
                 }}
+
             />
-        </div>
+            {label && <label className="text-input-helper">{label}</label>}
+        </div >
     );
 }
 

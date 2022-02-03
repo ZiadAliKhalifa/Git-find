@@ -10,7 +10,10 @@ const SearchBox = () => {
     }
 
     return (
-        <TextInput timeoutFunction={handleSearch} />
+        <TextInput
+            timeoutFunction={handleSearch}
+            label={"Just start typing and results will appear!"}
+        />
     );
 }
 
