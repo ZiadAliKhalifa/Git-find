@@ -8,8 +8,8 @@ export const octokit = new Octokit({
  * @param searchTerm The term to search GitHub for
  */
 export async function getReposWithName(searchTerm) {
-    await octokit.search.repos({ q: `${searchTerm} in:name` })
-        .then(res => console.log(res))
+    return await octokit.search.repos({ q: `${searchTerm} in:name` })
+        .then(res => { return res })
         .catch(err => console.log(err))
 }
 

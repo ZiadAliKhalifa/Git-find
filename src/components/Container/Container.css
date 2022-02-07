@@ -4,10 +4,28 @@
     width: 70vw;
 }
 
-.search-box-container {
+.header-mini {
+    object-fit: cover;
+    width: 50vw;
+    max-height: 20vh;
+    transition: all 0.2s ease-in;
+}
+
+.container {
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+.full {
+    height: 100vh;
+}
+
+.mini {
+    padding-bottom: 50px;
+}
+
+.search-box-container {
     background-color: var(--background-primary-color);
 }

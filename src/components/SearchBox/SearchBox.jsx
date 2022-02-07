@@ -1,21 +1,16 @@
-import { getReposWithName } from "../../APIs/repositoryAPIs";
 import TextInput from "../common/TextInput/TextInput";
+
 import "./SearchBox.css";
 
-const SearchBox = () => {
+const SearchBox = ({ handleSearch }) => {
 
-    const handleSearch = async (value) => {
-        console.log("---------------")
-        console.log(process.env.REACT_APP_GH_KEY)
-        console.log(`searching for ${value}`)
-
-        // Trigger API call here
-        await getReposWithName(value)
+    const handleTypingStopped = (value) => {
+        handleSearch(value)
     }
 
     return (
         <TextInput
-            timeoutFunction={handleSearch}
+            timeoutFunction={handleTypingStopped}
             label={"Just start typing and results will appear!"}
         />
     );
